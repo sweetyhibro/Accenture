@@ -1,0 +1,11 @@
+n=int(input())
+a=list(map(int,input().split()))
+count3,countnot3=0,0
+for i in a:
+    if i%3==0:
+        count3+=1
+    else:
+        countnot3+=1
+z=count3*(count3-1)//2
+y=count3*countnot3
+print(z+y)
