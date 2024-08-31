@@ -1,0 +1,14 @@
+def bad(s):
+    bad=0
+    for i in range(len(s)-1):
+        if s[i]!=s[i+1]:
+            bad+=1
+    return bad
+def minb(s):
+    rr=s.replace('W','R')
+    br=bad(rr)
+    rb=s.replace('W','B')
+    bb=bad(rb)
+    return min(br,bb)
+s=input()
+print(minb(s))
